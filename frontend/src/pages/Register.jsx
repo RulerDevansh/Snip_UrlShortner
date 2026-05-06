@@ -35,7 +35,7 @@ export default function Register() {
     try {
       const res = await authService.register(form);
       login(res.data.token, res.data.user);
-      toast.success('Account created! Welcome to Snip 🎉');
+      toast.success('Account created! Welcome to snipshort 🎉');
       navigate('/dashboard', { replace: true });
     } catch (err) {
       toast.error(err.message);

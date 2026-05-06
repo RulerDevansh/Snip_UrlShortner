@@ -84,7 +84,7 @@ export default function ShortenForm({ onCreated }) {
 
         {showAlias && (
           <div className="flex items-center gap-2 animate-in">
-            <span className="text-sm text-gray-500 shrink-0">snip.io/r/</span>
+            <span className="text-sm text-gray-500 shrink-0">snipshort.vercel.app/r/</span>
             <input
               id="alias-input"
               type="text"

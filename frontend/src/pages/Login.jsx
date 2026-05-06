@@ -57,7 +57,7 @@ export default function Login() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome back</h1>
-          <p className="text-gray-500">Log in to your Snip account</p>
+          <p className="text-gray-500">Log in to your snipshort account</p>
         </div>
 
         {oauthError && (
