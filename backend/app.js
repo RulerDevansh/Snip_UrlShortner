@@ -35,17 +35,15 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // ─── Passport (OAuth) ────────────────────────────────────────
 app.use(passport.initialize());
 
-// ─── Rate limiting (global) ──────────────────────────────────
-app.use('/api', globalLimiter);
-
 // ─── Health check ────────────────────────────────────────────
 app.get('/health', (_req, res) => {
   res.json({ success: true, status: 'ok', timestamp: new Date().toISOString() });
 });
 
 // ─── Routes ──────────────────────────────────────────────────
-app.use('/api/auth', authRoutes);
-app.use('/api/links', linkRoutes);
+app.use('/auth', authRoutes); // Legacy fallback
+app.use('/api/auth', globalLimiter, authRoutes);
+app.use('/api/links', globalLimiter, linkRoutes);
 app.use('/r', redirectRoutes);
 
 // ─── Error handling ──────────────────────────────────────────
