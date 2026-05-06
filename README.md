@@ -1,4 +1,4 @@
-# ✂️ SnipShort — High Performance URL Shortener
+# ✂️ SnipShort — Redis based URL Shortener
 
 ![Node.js](https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
@@ -12,9 +12,14 @@ A blazing-fast URL shortener featuring **sub-millisecond redirects** via Redis c
 
 ## 📸 Screenshots
 
-| Landing Page | Dashboard | Login |
-|:---:|:---:|:---:|
-| ![Home](frontend/public/Home.png) | ![Dashboard](frontend/public/dashboard.png) | ![Login](frontend/public/Login.png) |
+### Landing Page
+![Landing Page](frontend/public/Home.png)
+
+### User Dashboard
+![Dashboard](frontend/public/dashboard.png)
+
+### Authentication
+![Login](frontend/public/Login.png)
 
 ---
 
