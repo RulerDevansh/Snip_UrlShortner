@@ -129,7 +129,9 @@ export default function LinkCard({ link, onDeleted }) {
 
             {/* Age */}
             <span className="text-xs text-gray-600">
-              {formatDistanceToNow(new Date(link.created_at), { addSuffix: true })}
+              {link.created_at && !isNaN(new Date(link.created_at).getTime())
+                ? formatDistanceToNow(new Date(link.created_at), { addSuffix: true })
+                : 'just now'}
             </span>
           </div>
 
@@ -162,7 +164,11 @@ export default function LinkCard({ link, onDeleted }) {
                 <div className="space-y-2">
                   {stats.recent_clicks.map((click, i) => (
                     <div key={i} className="flex items-center gap-3 text-xs text-gray-400">
-                      <span className="text-gray-600">{formatDistanceToNow(new Date(click.created_at), { addSuffix: true })}</span>
+                      <span className="text-gray-600">
+                        {click.created_at && !isNaN(new Date(click.created_at).getTime())
+                          ? formatDistanceToNow(new Date(click.created_at), { addSuffix: true })
+                          : 'some time ago'}
+                      </span>
                       <span className="text-gray-700">·</span>
                       <span className="truncate max-w-[200px]" title={click.user_agent}>{click.user_agent || 'Unknown agent'}</span>
                     </div>
