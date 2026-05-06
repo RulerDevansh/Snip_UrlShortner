@@ -35,6 +35,11 @@ export default function App() {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
+            <footer className="py-8 border-t border-surface-border text-center">
+              <p className="text-xs text-gray-600 font-medium tracking-widest uppercase">
+                Made with ❤️ by <span className="text-brand-400">RulerDevansh</span>
+              </p>
+            </footer>
           </div>
           <Toast />
         </ToastProvider>

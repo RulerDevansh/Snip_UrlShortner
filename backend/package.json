@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Production-grade URL shortener API",
   "main": "server.js",
+  "author": "RulerDevansh",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
