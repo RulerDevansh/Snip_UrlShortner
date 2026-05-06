@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://65.2.38.43/api/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "http://65.2.38.43/auth/:path*"
+    },
+    {
+      "source": "/r/:path*",
+      "destination": "http://65.2.38.43/r/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
